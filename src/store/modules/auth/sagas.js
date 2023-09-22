@@ -16,16 +16,16 @@ function* loginRequest({ payload }) {
       payload.email !== 'rodrigoganchieta@gmail.com' &&
       payload.password !== '123456'
     ) {
-      toast.error('Usuário ou senha inválidos.');
+      toast.error('Username or password is invalid.');
       yield put(actions.loginFailure());
       return;
     }
 
     yield put(actions.loginSuccess({ ...response.data }));
-    toast.success('Você fez login');
+    toast.success('You are logged in!');
     payload.history.push(payload.prevPath);
   } catch (e) {
-    toast.error('Usuário ou senha inválidos.');
+    toast.error('Username or password is invalid.');
     yield put(actions.loginFailure());
   }
 }

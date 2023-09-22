@@ -45,13 +45,13 @@ export default function Login(props) {
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Seu e-mail"
+          placeholder="Email"
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Sua senha"
+          placeholder="Password"
         />
         <button type="submit">Acessar</button>
       </Form>
